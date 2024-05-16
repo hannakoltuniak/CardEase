@@ -69,7 +69,7 @@ namespace card_ease_api.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok(await _context.CardDetails.ToListAsync());
         }
 
         // POST: api/CardDetail
@@ -83,7 +83,8 @@ namespace card_ease_api.Controllers
             _context.CardDetails.Add(cardDetail);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCardDetail", new { id = cardDetail.PaymentDetailId }, cardDetail);
+            //return CreatedAtAction("GetCardDetail", new { id = cardDetail.PaymentDetailId }, cardDetail);
+            return Ok(await _context.CardDetails.ToListAsync());
         }
 
         // DELETE: api/CardDetail/5
@@ -99,7 +100,7 @@ namespace card_ease_api.Controllers
             _context.CardDetails.Remove(cardDetail);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(await _context.CardDetails.ToListAsync());
         }
 
         private bool CardDetailExists(int id)
