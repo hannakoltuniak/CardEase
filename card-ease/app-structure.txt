@@ -1,0 +1,12 @@
+src
+├── app
+│   ├── card-details
+│   │   ├── card-details.component.ts|.html
+│   │   └── card-detail-form
+│   │       └── card-detail-form.component.ts|.html
+│   ├── shared
+│   │   ├── card-detail.service.ts
+│   │   └── card-detail.model.ts
+│   └── app.module.ts
+├── styles.css (global css rules)
+└── index.html (cdn path for bootstrap & fa icons)
