@@ -4,4 +4,5 @@ export class CardDetail {
     cardNumber: string = ""
     expirationDate: string = ""
     securityCode: string = ""
+    color?: string
 }

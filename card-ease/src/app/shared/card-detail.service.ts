@@ -30,20 +30,25 @@ export class CardDetailService {
   postCardDetail() {
     return this.http.post(this.url, this.formData)
   }
-
+  
   putCardDetail() {
     return this.http.put(this.url + '/' + this.formData.paymentDetailId, this.formData)
   }
-
 
   deleteCardDetail(id: number) {
     return this.http.delete(this.url + '/' + id)
   }
 
-
   resetForm(form: NgForm) {
     form.form.reset()
     this.formData = new CardDetail()
     this.formSubmitted = false
+  }
+
+  assignRandomColor(card: CardDetail) {
+    
+    const colors = ['#8ECAE6', '#219EBC', '#023047', '#FFB703', '#FB8500'];
+    card.color = colors[Math.floor(Math.random() * colors.length)];
+    console.log("color assigned: " + card.color);
   }
 }

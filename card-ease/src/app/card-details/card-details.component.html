@@ -1,5 +1,5 @@
-<div class="bg-body-secondary text-center py-5 rounded-2">
-  <h1 class="dispay-6 fw-bold">Card Detail Register</h1>
+<div class="text-center py-5 rounded-2 custom-header">
+  <h1 class="dispay-6 fw-bold ">Card Detail Register</h1>
 </div>
 <div class="row mt-5">
   <div class="col-6">
@@ -7,12 +7,15 @@
   </div>
   <div class="col-6">
     <ul class="list-group">
-      <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3"
+      <div>
+        <h4 class="custom-heading">Saved Cards</h4>
+      </div>
+      <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3 card-color"
         *ngFor="let pd of service.list">
         <div class="flex-grow-1 mouse-hover" (click)="populateForm(pd)">
-          <div class="fw-bold">{{pd.cardOwnerName}}</div>
-          <div>{{pd.cardNumber}}</div>
-          <div class="fw-bold">{{pd.expirationDate}}</div>
+          <div class="card-number">{{pd.cardNumber}}</div>
+          <div class="fw-bold custom-name">{{pd.cardOwnerName}}</div>
+          <div class="custom-date">{{pd.expirationDate}}</div>
         </div>
         <span class="text-secondary">
           <i class="fa-solid fa-trash-can fa-lg mouse-hover" (click)="onDelete(pd.paymentDetailId)"></i>

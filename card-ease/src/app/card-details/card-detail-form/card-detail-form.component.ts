@@ -24,10 +24,14 @@ export class CardDetailFormComponent {
   }
 
   insertRecord(form: NgForm) {
+    this.service.assignRandomColor(this.service.formData)
+    console.log(this.service.formData.color);
+    
     this.service.postCardDetail()
       .subscribe({
         next: res => {
           this.service.list = res as CardDetail[]
+          this.service.refreshList();
           this.service.resetForm(form)
           this.toastr.success('Inserted successfully', 'Card Detail Register')
         },

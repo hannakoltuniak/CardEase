@@ -22,3 +22,82 @@
   form.submitted input.ng-invalid{
     border-color: red;
   }
+
+.body {
+ background-color: #181a1b;   
+}
+
+.custom-header {
+    opacity: 1;
+    margin-top: 20px; 
+    background-color: #212529; 
+    color: #ffffff; 
+    padding: 10px; 
+}
+
+.custom-label {
+    text-transform: uppercase;
+    color: grey;
+}
+
+.custom-form {
+  padding-right: calc(var(--bs-gutter-x)* 1);;
+}
+
+.custom-heading {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-number {
+  font-family: 'Courier New', Courier, monospace !important; 
+  font-size: 27px;
+  letter-spacing: 2px;
+  position: relative; 
+  font-weight: 1000; 
+  color: white;
+  text-shadow: 
+  -1px -1px 0 #343a40,  
+  1px -1px 0 #343a40,
+  -1px 1px 0 #343a40,
+  1px 1px 0 #343a40;
+}
+
+.custom-date {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: right;
+  font-size: x-large;
+  letter-spacing: 1.5px;
+  font-weight: 1000; 
+  color: white;
+  text-shadow: 
+  -1px -1px 0 #343a40,  
+  1px -1px 0 #343a40,
+  -1px 1px 0 #343a40,
+  1px 1px 0 #343a40;
+}
+
+.custom-name {
+  font-family: 'Courier New', Courier, monospace !important; 
+  font-size: larger !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px;
+  color: white;
+  text-shadow: 
+  -1px -1px 0 #343a40,  
+  1px -1px 0 #343a40,
+  -1px 1px 0 #343a40,
+  1px 1px 0 #343a40;
+}
+
+.card-color {
+  background-color: var(--bg-color);
+  border: 2px solid #343a40 !important;
+}
+
+.card-color:nth-child(1) { --bg-color: #ffc107; }
+.card-color:nth-child(2) { --bg-color: #20c997; }
+.card-color:nth-child(3) { --bg-color: #6f42c1  ; }
+.card-color:nth-child(4) { --bg-color: #dc3545; }
+
